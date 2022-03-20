@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MikeKondo_Kadai1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="MikeKondo_Kadai1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="tappedCaculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ovi-zz-Aq0"/>
+                                    <action selector="tappedCalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5y-eT-GOf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTj-Qn-88a">
@@ -81,11 +81,11 @@
                     </view>
                     <connections>
                         <outlet property="calculateResultLabel" destination="RTj-Qn-88a" id="89E-Zq-7dR"/>
-                        <outlet property="number1TextField" destination="T1j-bl-vGZ" id="GQP-ud-ibt"/>
-                        <outlet property="number2TextField" destination="hLB-5H-Zkm" id="0Uv-0g-jq5"/>
-                        <outlet property="number3TextField" destination="WX0-Wu-7bF" id="YTn-u4-ALE"/>
-                        <outlet property="number4TextField" destination="lAj-wK-PTA" id="8v4-Kz-uK7"/>
-                        <outlet property="number5TextField" destination="qrQ-3V-fYx" id="93z-Cg-NZ8"/>
+                        <outletCollection property="numberTextField" destination="T1j-bl-vGZ" collectionClass="NSMutableArray" id="NFE-q9-5XE"/>
+                        <outletCollection property="numberTextField" destination="hLB-5H-Zkm" collectionClass="NSMutableArray" id="eEC-Qm-pZD"/>
+                        <outletCollection property="numberTextField" destination="WX0-Wu-7bF" collectionClass="NSMutableArray" id="9wu-RF-VON"/>
+                        <outletCollection property="numberTextField" destination="lAj-wK-PTA" collectionClass="NSMutableArray" id="hNi-iZ-W2j"/>
+                        <outletCollection property="numberTextField" destination="qrQ-3V-fYx" collectionClass="NSMutableArray" id="XRQ-Eu-Hyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
