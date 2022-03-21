@@ -7,32 +7,30 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController{
-    @IBOutlet var numberTextField: [UITextField]!
-    @IBOutlet weak var calculateResultLabel: UILabel!
+class CalculateViewController: UIViewController {
+    @IBOutlet private var numberTextField: [UITextField]!
+    @IBOutlet private weak var calculateResultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: このメソッドの命名はあまり適切でないように思えるのでFBいただきたいです。
-        textFieldDelegateSelf()
-        textFieldKeyBoardTyep()
+        setUpTextFieldDelegateSelf()
+        setUpTextFieldKeyBoardType()
     }
-    @IBAction func tappedCalculateButton(_ sender: Any) {
+    @IBAction private func tappedCalculateButton(_ sender: Any) {
         var numberArray: [Int] = Array(repeating: 0, count: 5)
-        for i in 0..<5{
-            numberArray[i] = Int(numberTextField[i].text ?? "") ?? 0
+        for numberIndex in 0..<5 {
+            numberArray[numberIndex] = Int(numberTextField[numberIndex].text ?? "") ?? 0
         }
         // 入力された数の合計数を代入
-        calculateResultLabel.text = String(numberArray.reduce(0, +))
-
+        calculateResultLabel.text = "\(numberArray.reduce(0, +))"
     }
-    private func textFieldDelegateSelf(){
-        for i in 0..<5{
-            numberTextField[i].delegate = self
+    private func setUpTextFieldDelegateSelf() {
+        for numberIndex in 0..<5 {
+            numberTextField[numberIndex].delegate = self
         }
     }
-    private func textFieldKeyBoardTyep(){
-        for i in 0..<5{
-            numberTextField[i].keyboardType = UIKeyboardType.numberPad
+    private func setUpTextFieldKeyBoardType() {
+        for numberIndex in 0..<5 {
+            numberTextField[numberIndex].keyboardType = UIKeyboardType.numberPad
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,9 +38,8 @@ class CalculateViewController: UIViewController{
     }
 }
 
-extension CalculateViewController: UITextFieldDelegate{
+extension CalculateViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }
 }
-
