@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95BE5AC027F3FA3D00453798 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 95BE5ABF27F3FA3D00453798 /* .swiftlint.yml */; };
 		95FFBF5A27E717CF007908B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FFBF5927E717CF007908B7 /* AppDelegate.swift */; };
 		95FFBF5C27E717CF007908B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FFBF5B27E717CF007908B7 /* SceneDelegate.swift */; };
 		95FFBF5E27E717CF007908B7 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FFBF5D27E717CF007908B7 /* CalculateViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95BE5ABF27F3FA3D00453798 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		95FFBF5627E717CF007908B7 /* MikeKondo-Kadai1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MikeKondo-Kadai1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FFBF5927E717CF007908B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95FFBF5B27E717CF007908B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				95FFBF5927E717CF007908B7 /* AppDelegate.swift */,
 				95FFBF5B27E717CF007908B7 /* SceneDelegate.swift */,
 				95FFBF5D27E717CF007908B7 /* CalculateViewController.swift */,
+				95BE5ABF27F3FA3D00453798 /* .swiftlint.yml */,
 				95FFBF5F27E717CF007908B7 /* Main.storyboard */,
 				95FFBF6227E717D0007908B7 /* Assets.xcassets */,
 				95FFBF6427E717D0007908B7 /* LaunchScreen.storyboard */,
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BE5AC027F3FA3D00453798 /* .swiftlint.yml in Resources */,
 				95FFBF6627E717D0007908B7 /* LaunchScreen.storyboard in Resources */,
 				95FFBF6327E717D0007908B7 /* Assets.xcassets in Resources */,
 				95FFBF6127E717CF007908B7 /* Main.storyboard in Resources */,
