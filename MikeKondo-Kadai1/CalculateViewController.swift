@@ -8,7 +8,7 @@
 import UIKit
 
 class CalculateViewController: UIViewController {
-    @IBOutlet private var numberTextField: [UITextField]!
+    @IBOutlet private var numberTextFields: [UITextField]!
     @IBOutlet private weak var calculateResultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +18,22 @@ class CalculateViewController: UIViewController {
     @IBAction private func tappedCalculateButton(_ sender: Any) {
         var numberArray: [Int] = Array(repeating: 0, count: 5)
         for numberIndex in 0..<5 {
-            numberArray[numberIndex] = Int(numberTextField[numberIndex].text ?? "") ?? 0
+            numberArray[numberIndex] = Int(numberTextFields[numberIndex].text ?? "") ?? 0
         }
         // 入力された数の合計数を代入
         calculateResultLabel.text = "\(numberArray.reduce(0, +))"
     }
     private func setUpTextFieldDelegateSelf() {
-        for numberIndex in 0..<5 {
-            numberTextField[numberIndex].delegate = self
+        numberTextFields.forEach {
+            $0.delegate = self
         }
     }
     private func setUpTextFieldKeyBoardType() {
         for numberIndex in 0..<5 {
-            numberTextField[numberIndex].keyboardType = UIKeyboardType.numberPad
+            numberTextFields[numberIndex].keyboardType = UIKeyboardType.numberPad
+        }
+        numberTextFields.forEach {
+            $0.keyboardType = .numberPad
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
